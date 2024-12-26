@@ -1,0 +1,12 @@
+<navbar [items]="items" (abrirEventEmitter)="abrirCarrito()" />
+
+<div class="container my-4">
+
+    <h2>Catálogo de productos App!</h2>
+    <catalogo [productos]="productos" (productoEventEmitter)="agregarCarrito($event)" />
+
+    @if ( mostrarCarrito ) {
+        <carrito-modal [items]="items" (idProductoEventEmitter)="eliminarProducto($event)" (abrirEventEmitter)="abrirCarrito()"/>
+    }
+    
+</div>

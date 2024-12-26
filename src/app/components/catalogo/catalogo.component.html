@@ -1,0 +1,10 @@
+
+<div class="row">
+    @for( producto of productos; track $index) {
+        <div class="col-4 my-2">
+            <producto-card [producto]="producto"
+            (productoEventEmitter)="agregarCarrito($event)"/>
+        </div>
+        
+    }
+</div>
